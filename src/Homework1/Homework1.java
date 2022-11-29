@@ -2,7 +2,7 @@ package Homework1;
 import java.util.Scanner;
 
 public class Homework1 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the digit: ");
         int digit = scan.nextInt();
@@ -23,12 +23,9 @@ public class Homework1 {
             System.out.println("We have gryvnas!, We are not moneyless! YAY!");
             if (digit == 1)
                 System.out.println("We have: " + digit + " gryvnya");
-            else if (digit > 1 && digit < 5)
+            else if (digit < 5)
                 System.out.println("We have: " + digit + " gryvny");
-            else if (digit >= 5 && digit <= 10)
-                System.out.println("We have: " + digit + " gryven`");
-            else
-                System.out.println("How do u do that?");
+            else System.out.println("We have: " + digit + " gryven`");
         } else if (digit > 10) {
             System.out.println("We have gryvnas!, We are not moneyless! YAY!");
             System.out.println(" WE ARE REACH ! ");

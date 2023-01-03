@@ -5,20 +5,14 @@ import java.util.*;
 
 public class Task2 {
 
-    private interface containsOverNum{
-        abstract public boolean test(ArrayList<String> s, String s1);
-    }
-
     private static void task2(String str){
         String[] strings = str.split("\n");
-        ArrayList<String> stringArrayList = new ArrayList<>();
+        Set<String> stringTreeList = new TreeSet<>();
+
         Arrays.stream(strings)
                 .filter(s -> s.length() > 45)
-                .forEach(s -> {
-                    if (!stringArrayList.contains(s))
-                        stringArrayList.add(s);
-                });
-        System.out.println(stringArrayList);
+                .forEach(stringTreeList::add);
+        System.out.println(stringTreeList);
     }
 
     public static void main(String[] args) {
